@@ -134,6 +134,13 @@ config BCM21553_L2_EVCT
         depends on ARCH_BCM215XX && CACHE_L2X0
         bool "Enable L2 eviction workaround"
 
+config FORCE_FAST_CHARGE
+  bool "Force AC charge mode at will"
+  default y
+  help
+    A simple sysfs interface to force adapters that
+    are detected as USB to charge as AC.    	    
+
 config BCM215XX_PM
         bool "Enable Platform power management for BCM215XX platform"
         depends on PM && ARCH_BCM215XX
